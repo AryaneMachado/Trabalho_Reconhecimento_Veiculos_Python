@@ -1,0 +1,23 @@
+# .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Dados e Modelos (Não subir arquivos pesados)
+data/*.mp4
+data/*.avi
+data/*.db
+*.pt
+*.onnx
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs e OS
+*.log
+.DS_Store

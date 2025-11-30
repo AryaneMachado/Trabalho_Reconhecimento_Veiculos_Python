@@ -1,0 +1,12 @@
+# --- Visão Computacional (Aryane - Raia 1) ---
+ultralytics
+easyocr
+opencv-python
+
+# --- Dados e Backend (Luiz Gustavo - Raia 2) ---
+pandas
+numpy
+
+# --- Dashboard/Frontend (João - Raia 3) ---
+streamlit
+watchdog
