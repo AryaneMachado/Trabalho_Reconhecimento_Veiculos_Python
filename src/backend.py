@@ -1,14 +1,17 @@
+# backend.py
 from datetime import datetime
+import database
+
+# Garante que o banco existe ao iniciar
+database.inicializar_db()
 
 def registrar_leitura(placa, data_hora_real, tempo_no_video, nome_arquivo):
     """
-    Função Interface para a Raia 2.
-    Aqui será inserido o código SQL para salvar no Banco de Dados.
+    Recebe a leitura da IA e manda para o banco de dados.
     """
-    data_sql = data_hora_real.strftime("%Y-%m-%d")
-    hora_sql = data_hora_real.strftime("%H:%M:%S")
+    print(f"💾 [DB] Processando placa: {placa}...")
     
-    # --- ESPAÇO PARA O CÓDIGO DA RAIA 2 ---
-    # Exemplo: cursor.execute("INSERT INTO registros ...")
-    # print(f"[DEBUG BACKEND] Salvando: {placa} em {data_sql} {hora_sql}")
-    pass
+    # Formata para string compatível com SQLite
+    # data_hora_real já vem como objeto datetime do script original
+    
+    database.salvar_registro(placa, data_hora_real, nome_arquivo)
