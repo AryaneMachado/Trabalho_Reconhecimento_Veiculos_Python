@@ -17,7 +17,7 @@ st.set_page_config(
 database.inicializar_db()
 
 # --- BARRA LATERAL (MENU) ---
-st.sidebar.image("https://upload.wikimedia.org/wikipedia/commons/2/22/IFSULDEMINAS_vertical.png", caption="Campus Machado", width=150)
+st.sidebar.image("https://portal.ifsuldeminas.edu.br/images/PDFs/comunicacao/logotipos/ifsuldeminas/IFSULDEMINAS_vertical.png", caption="Campus Machado", width=150)
 st.sidebar.title("Menu Principal")
 opcao = st.sidebar.radio("Navegação", [
     "📡 Monitoramento Real", 
@@ -151,7 +151,7 @@ elif opcao == "🚗 Gestão de Veículos":
             proprietario = st.text_input("Nome do Proprietário/Setor")
             
             # Requisito 2: Gerenciamento diferenciado
-            tipo_input = st.selectbox("Tipo de Veículo", ["PARTICULAR", "OFICIAL"])
+            tipo_input = st.selectbox("Tipo de Veículo", ["PARTICULAR", "OFICIAL", "VISITANTE"])
             
             # Requisito 3 e 7: Marcação de Status
             status_input = st.selectbox("Status de Acesso", ["AUTORIZADO", "NAO_AUTORIZADO", "OCORRENCIA"])
